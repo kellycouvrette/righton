@@ -51,11 +51,12 @@ function Quiz() {
               onChange={() => handleOptionClick('A')}
               disabled={submitClicked}
               icon={<span style={{ borderRadius: '50%', width: '1.5em', height: '1.5em', border: '2px solid black', display: 'inline-block', marginRight: '10px' }} />}
-              checkedIcon={<span style={{ borderRadius: '50%', width: '1.5em', height: '1.5em', backgroundColor: selectedOption === 'A' ? 'blue' : 'inherit', display: 'inline-block', marginRight: '10px', border: '2px solid blue' }} />}
+              checkedIcon={<span style={{ borderRadius: '50%', width: '1.5em', height: '1.5em', backgroundColor: selectedOption === 'A' ? '#87CEEB' : 'inherit', display: 'inline-block', marginRight: '10px', border: '2px solid #87CEEB' }} />}
             />
           }
           label={<Typography variant="body1"><strong>A</strong> 8</Typography>}
-          sx={{ marginBottom: '10px', border: '1px solid black', borderRadius: '50px', padding: '5px' }}
+          //sx={{ marginBottom: '10px', border: '1px solid black', borderRadius: '50px', padding: '5px' }}
+          sx={{ marginBottom: '10px', border: selectedOption === 'A' ? '2px solid #87CEEB' : '1px solid black', borderRadius: '50px', padding: '5px' }} // Adjusted border color
         />
         <FormControlLabel
           control={
@@ -65,12 +66,12 @@ function Quiz() {
               onChange={() => handleOptionClick('B')}
               disabled={submitClicked}
               icon={<span style={{ borderRadius: '100%', width: '1.5em', height: '1.5em', border: '2px solid black', display: 'inline-block', marginRight: '10px' }} />}
-              checkedIcon={<span style={{ borderRadius: '50%', width: '1.5em', height: '1.5em', backgroundColor: selectedOption === 'B' ? 'blue' : 'inherit', display: 'inline-block', marginRight: '10px', border: '2px solid blue' }} />}
+              checkedIcon={<span style={{ borderRadius: '50%', width: '1.5em', height: '1.5em', backgroundColor: selectedOption === 'B' ? '#87CEEB' : 'inherit', display: 'inline-block', marginRight: '10px', border: '2px solid #87CEEB' }} />}
             />
           }
           label={<Typography variant="body1"><strong>B</strong> 360</Typography>}
-          sx={{ marginBottom: '10px', border: '1px solid black', borderRadius: '50px', padding: '5px' }}
-        />
+          sx={{ marginBottom: '10px', border: selectedOption === 'B' ? '2px solid #87CEEB' : '1px solid black', borderRadius: '50px', padding: '5px' }} // Adjusted border color
+          />
         <FormControlLabel
           control={
             <Checkbox
@@ -79,12 +80,12 @@ function Quiz() {
               onChange={() => handleOptionClick('C')}
               disabled={submitClicked}
               icon={<span style={{ borderRadius: '50%', width: '1.5em', height: '1.5em', border: '2px solid black', display: 'inline-block', marginRight: '10px' }} />}
-              checkedIcon={<span style={{ borderRadius: '50%', width: '1.5em', height: '1.5em', backgroundColor: selectedOption === 'C' ? 'blue' : 'inherit', display: 'inline-block', marginRight: '10px', border: '2px solid blue' }} />}
+              checkedIcon={<span style={{ borderRadius: '50%', width: '1.5em', height: '1.5em', backgroundColor: selectedOption === 'C' ? '#87CEEB' : 'inherit', display: 'inline-block', marginRight: '10px', border: '2px solid #87CEEB' }} />}
             />
           }
           label={<Typography variant="body1"><strong>C</strong> 1080</Typography>}
-          sx={{ marginBottom: '10px', border: '1px solid black', borderRadius: '50px', padding: '5px' }}
-        />
+          sx={{ marginBottom: '10px', border: selectedOption === 'C' ? '2px solid #87CEEB' : '1px solid black', borderRadius: '50px', padding: '5px' }} // Adjusted border color
+          />
         <FormControlLabel
           control={
             <Checkbox
@@ -93,20 +94,13 @@ function Quiz() {
               onChange={() => handleOptionClick('D')}
               disabled={submitClicked}
               icon={<span style={{ borderRadius: '50%', width: '1.5em', height: '1.5em', border: '2px solid black', display: 'inline-block', marginRight: '10px' }} />}
-              checkedIcon={<span style={{ borderRadius: '50%', width: '1.5em', height: '1.5em', backgroundColor: selectedOption === 'D' ? 'blue' : 'inherit', display: 'inline-block', marginRight: '10px', border: '2px solid blue' }} />}
+              checkedIcon={<span style={{ borderRadius: '50%', width: '1.5em', height: '1.5em', backgroundColor: selectedOption === 'D' ? '#87CEEB' : 'inherit', display: 'inline-block', marginRight: '10px', border: '2px solid #87CEEB' }} />}
             />
           }
           label={<Typography variant="body1"><strong>D</strong> There is no way to know the answer.</Typography>}
-          sx={{ marginBottom: '10px', border: '1px solid black', borderRadius: '50px', padding: '5px' }}
-        />
-        {/* <Button
-          variant="outlined"
-          onClick={handleSubmit}
-          disabled={submitClicked}
-          sx={{ alignSelf: 'center', marginTop: '10px', borderRadius: '50px', bgcolor: submitClicked ? '#87CEEB' : 'gray', '&:hover': { bgcolor: submitClicked ? '#87CEEB' : 'gray' } }}
-        >
-          Submit Answer
-        </Button> */}
+          sx={{ marginBottom: '10px', border: selectedOption === 'D' ? '2px solid #87CEEB' : '1px solid black', borderRadius: '50px', padding: '5px' }} // Adjusted border color
+          />
+        
         <Button
             variant="outlined"
             onClick={handleSubmit}
